@@ -24,6 +24,18 @@ border-radius:25px;
 max-width:700px;
 margin:auto;
 box-shadow:0 15px 40px rgba(0,0,0,0.1);
+animation: aparecer 2s ease;
+}
+
+@keyframes aparecer{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 h1{
@@ -63,24 +75,26 @@ font-size:18px;
 
 <h2>Nos encantaría que nos acompañes</h2>
 
-<p class="fecha">20 de Octubre 2026</p>
+<p class="fecha">17 de Octubre 2026</p>
 
 <p>
 Celebramos nuestro amor y queremos compartir este momento contigo.
 </p>
 
-<h2>María & José</h2>
+<h2>Vale & Alan</h2>
 <div id="contador"></div>
 <a class="boton" href="https://wa.me/5218129100720?text=Hola,%20confirmo%20mi%20asistencia%20a%20su%20boda">
 Confirmar asistencia
 </a>
-<a class="boton" href="https://maps.google.com" target="_blank">
-Ver ubicación
+  <a class="boton" href="https://maps.app.goo.gl/qvk6K739ZMDE3mmY7" target="_blank">
+Ver ubicación de la boda
+</a>
+
 </a>
 </div>
 <script>
 
-const fechaBoda = new Date("Oct 20, 2026 18:00:00").getTime();
+const fechaBoda = new Date("Oct 17, 2026 18:00:00").getTime();
 
 const contador = setInterval(function() {
 
