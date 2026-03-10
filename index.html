@@ -126,7 +126,20 @@ transition:all 1s ease;
 opacity:1;
 transform:translateY(0);
 }
-  
+
+
+  .aparecer{
+opacity:0;
+transform:translateY(30px);
+animation:aparecerAnim 2s ease forwards;
+}
+
+@keyframes aparecerAnim{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 </style>
 
 </head>
@@ -137,7 +150,7 @@ transform:translateY(0);
 
 <section class="portada">
 
-<div class="nombres">Vale & Alan</div>
+<div class="nombres aparecer">Vale & Alan</div>
 
 <div class="fecha">
 17 Octubre 2026
@@ -171,7 +184,7 @@ Tocar nuestra canción
 
 <!-- INVITACION -->
 
-<section>
+
 <section class="animar">
 
 <div class="titulo">
@@ -223,9 +236,8 @@ Eduardo Zenteno Sánchez
 Stephane Leilany Marroquín Sánchez<br>
 Angel Omar Carrilllo Leija
 </p>
+</section>
 
-
-<section>
 <section class="animar">
 <div class="titulo">
 Nuestra Historia en Fotos
@@ -254,7 +266,7 @@ Cada momento juntos nos ha llevado hasta este día.
 
 <!-- CEREMONIA -->
 
-<section>
+
 <section class="animar">
 <div class="tarjeta">
 
@@ -285,7 +297,7 @@ Ubicación
 
 <!-- RECEPCION -->
 
-<section>
+
 <section class="animar">
 <div class="tarjeta">
 
@@ -311,7 +323,6 @@ Ubicación
 
 <!-- CONTADOR -->
 
-<section>
 <section class="animar">
 <div class="titulo">
 Cada momento nos acerca al día en que diremos “sí, para siempre”, faltan:
@@ -323,9 +334,8 @@ Cada momento nos acerca al día en que diremos “sí, para siempre”, faltan:
 
 <!-- VESTIMENTA -->
 
-<section>
+
 <section class="animar">
-<div class="tarjeta">
 
 <div class="tarjeta">
 
@@ -349,7 +359,6 @@ Les pedimos amablemente vestir de manera formal para acompañarnos, queremos que
 
 <!-- REGALOS -->
 
-<section>
 <section class="animar">
 <div class="tarjeta">
 <div class="titulo">
@@ -363,7 +372,6 @@ pero si deseas tener un detalle hemos elegido la lluvia de sobres, lo recibiremo
 
 </div>
 
-  <section>
 
     <section class="animar">
 <div class="tarjeta">
@@ -404,12 +412,13 @@ unidos en amor y bendecidos por Dios.
 
 <!-- CONFIRMACION -->
 
-<section>
+
 <section class="animar">
 <div class="tarjeta">
 <div class="titulo">
 Confirma tu asistencia
-</div>
+  </div>
+</section>
 
 <p>
 Tu presencia sería un regalo muy especial para nosotros. 
