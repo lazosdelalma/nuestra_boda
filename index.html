@@ -98,7 +98,27 @@ background-position:center;
 margin:40px 0;
 border-radius:20px;
 }
+.contenedor{
+max-width:900px;
+margin:auto;
+background:rgba(184,169,156,0.15);
+padding:40px 20px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  backdrop-filter:blur(6px);
+-webkit-backdrop-filter:blur(6px);
+}
 
+  .animar{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.animar.visible{
+opacity:1;
+transform:translateY(0);
+}
   
 </style>
 
@@ -122,6 +142,8 @@ Ver invitación
 
 </section>
 
+  <div class="contenedor">
+
 <!-- MUSICA -->
 
 <section id="musica">
@@ -143,7 +165,7 @@ Tocar nuestra canción
 <!-- INVITACION -->
 
 <section>
-
+<section class="animar">
 
 <div class="titulo">
 Dos caminos, una historia
@@ -197,7 +219,7 @@ Angel Omar Carrilllo Leija
 
 
 <section>
-
+<section class="animar">
 <div class="titulo">
 Nuestra Historia en Fotos
 </div>
@@ -226,7 +248,7 @@ Cada momento juntos nos ha llevado hasta este día.
 <!-- CEREMONIA -->
 
 <section>
-
+<section class="animar">
 <div class="tarjeta">
 
 <div class="titulo">
@@ -257,7 +279,7 @@ Ubicación
 <!-- RECEPCION -->
 
 <section>
-
+<section class="animar">
 <div class="tarjeta">
 
 <div class="titulo">
@@ -283,7 +305,7 @@ Ubicación
 <!-- CONTADOR -->
 
 <section>
-
+<section class="animar">
 <div class="titulo">
 Cada momento nos acerca al día en que diremos “sí, para siempre”, faltan:
 </div>
@@ -295,7 +317,7 @@ Cada momento nos acerca al día en que diremos “sí, para siempre”, faltan:
 <!-- VESTIMENTA -->
 
 <section>
-
+<section class="animar">
 <div class="tarjeta">
 
 <div class="tarjeta">
@@ -321,9 +343,8 @@ Les pedimos amablemente vestir de manera formal para acompañarnos, queremos que
 <!-- REGALOS -->
 
 <section>
-
+<section class="animar">
 <div class="tarjeta">
-
 <div class="titulo">
 Sugerencia de Regalo
 </div>
@@ -337,6 +358,8 @@ pero si deseas tener un detalle hemos elegido la lluvia de sobres, lo recibiremo
 
   <section>
 
+    <section class="animar">
+<div class="tarjeta">
 <div class="titulo">
 Nuestro Amor
 </div>
@@ -375,7 +398,8 @@ unidos en amor y bendecidos por Dios.
 <!-- CONFIRMACION -->
 
 <section>
-
+<section class="animar">
+<div class="tarjeta">
 <div class="titulo">
 Confirma tu asistencia
 </div>
@@ -421,5 +445,6 @@ dias + " días " + horas + " horas " + minutos + " min " + segundos + " seg";
 
 </script>
 
+  </div>
 </body>
 </html>
