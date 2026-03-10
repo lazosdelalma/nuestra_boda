@@ -35,10 +35,10 @@ color:white;
 
 .nombres{
 font-family:"Great Vibes";
-font-size:60px;
+font-size:65px;
 }
 
-.subtitulo{
+.fecha{
 font-family:"Cormorant Garamond";
 font-size:22px;
 margin-top:10px;
@@ -58,19 +58,24 @@ font-size:14px;
 .tarjeta{
 background:#B8A99C;
 color:white;
-padding:50px 20px;
+padding:60px 25px;
 margin:40px 20px;
 border-radius:20px;
 }
 
 .titulo{
 font-family:"Cormorant Garamond";
-font-size:28px;
+font-size:30px;
 margin-bottom:20px;
 }
 
 audio{
 margin-top:20px;
+}
+
+#contador{
+font-size:26px;
+font-family:"Cormorant Garamond";
 }
 
 </style>
@@ -85,11 +90,11 @@ margin-top:20px;
 
 <div class="nombres">Vale & Alan</div>
 
-<div class="subtitulo">
-17 de Octubre 2026
+<div class="fecha">
+17 Octubre 2026
 </div>
 
-<a class="boton" href="#historia">
+<a class="boton" href="#musica">
 Ver invitación
 </a>
 
@@ -97,7 +102,7 @@ Ver invitación
 
 <!-- MUSICA -->
 
-<section id="historia">
+<section id="musica">
 
 <div class="titulo">
 Escucha nuestra canción
@@ -133,16 +138,91 @@ Hoy celebramos el amor que nos trajo hasta aquí.
 
 <div class="tarjeta">
 
-<div class="titulo">Ceremonia</div>
+<div class="titulo">
+Ceremonia Religiosa
+</div>
 
 <p>
-La ceremonia religiosa se llevará a cabo
-el 17 de Octubre a las 5:00 pm.
+La ceremonia se llevará a cabo
+el 17 de Octubre a las 5:00 pm
+en la Iglesia San Nicolas de Bari.
 </p>
 
 <a class="boton" href="https://maps.app.goo.gl/cvPDZbtJzwzNC5he9" target="_blank">
-Ver ubicación
+Ubicación
 </a>
+
+</div>
+
+</section>
+
+<!-- RECEPCION -->
+
+<section>
+
+<div class="tarjeta">
+
+<div class="titulo">
+Recepción
+</div>
+
+<p>
+Después de la ceremonia
+los esperamos para celebrar con nosotros.
+</p>
+
+<a class="boton" href="https://maps.app.goo.gl/4tMxNZ8hAWe6BYLW7" target="_blank">
+Ubicación
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTADOR -->
+
+<section>
+
+<div class="titulo">
+Faltan
+</div>
+
+<div id="contador"></div>
+
+</section>
+
+<!-- VESTIMENTA -->
+
+<section>
+
+<div class="tarjeta">
+
+<div class="titulo">
+Código de Vestimenta
+</div>
+
+<p>
+Formal
+</p>
+
+</div>
+
+</section>
+
+<!-- REGALOS -->
+
+<section>
+
+<div class="tarjeta">
+
+<div class="titulo">
+Sugerencia de Regalo
+</div>
+
+<p>
+Tu presencia es nuestro mejor regalo,
+pero si deseas tener un detalle hemos elegido la lluvia de sobres.
+</p>
 
 </div>
 
@@ -153,19 +233,36 @@ Ver ubicación
 <section>
 
 <div class="titulo">
-¿Nos acompañas?
+Confirma tu asistencia
 </div>
 
-<p>
-Confirma tu asistencia
-</p>
-
 <a class="boton"
-href="https://wa.me/5218129100720?text=Confirmo%20mi%20asistencia">
-Confirmar asistencia
+href="https://wa.me/5218129100720?text=Confirmo%20mi%20asistencia%20a%20su%20boda">
+Confirmar
 </a>
 
 </section>
+
+<script>
+
+const fechaBoda = new Date("Oct 17, 2026 17:00:00").getTime();
+
+const contador = setInterval(function(){
+
+const ahora = new Date().getTime();
+const distancia = fechaBoda - ahora;
+
+const dias = Math.floor(distancia / (1000*60*60*24));
+const horas = Math.floor((distancia%(1000*60*60*24))/(1000*60*60));
+const minutos = Math.floor((distancia%(1000*60*60))/(1000*60));
+const segundos = Math.floor((distancia%(1000*60))/1000);
+
+document.getElementById("contador").innerHTML =
+dias + " días " + horas + " horas " + minutos + " min " + segundos + " seg";
+
+},1000);
+
+</script>
 
 </body>
 </html>
