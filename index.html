@@ -5,20 +5,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nuestra Boda</title>
+<title>Boda Vale & Alan</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;500&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<!-- TIPOGRAFIAS -->
+
+<link href="https://fonts.cdnfonts.com/css/halimum" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
 background:#F3EEE9;
-font-family:"Montserrat", sans-serif;
+font-family:'DejaVu Serif', serif;
 color:#5C5148;
 text-align:center;
 }
 
+/* PORTADA */
 
 .portada{
 height:100vh;
@@ -32,80 +35,39 @@ padding:20px;
 }
 
 .nombres{
-font-family:"Great Vibes";
-font-size:65px;
+font-family:'Halimum', cursive;
+font-size:64px;
+font-weight:bold;
 }
 
 .fecha{
-font-family:"Cormorant Garamond";
-font-size:22px;
+font-size:20px;
 margin-top:10px;
 }
+
+/* BOTONES */
 
 .boton{
 display:inline-block;
 margin-top:20px;
-padding:12px 25px;
+padding:12px 26px;
 background:#1E1E1E;
 color:white;
 text-decoration:none;
 border-radius:25px;
 font-size:14px;
 cursor:pointer;
+transition:all .3s;
 }
 
-  .boton:hover{
+.boton:hover{
 background:#3a3a3a;
-transform:scale(1.03);
-transition:all 0.3s ease;
-}
-.tarjeta{
-background:#B8A99C;
-color:white;
-padding:60px 25px;
-margin:40px 20px;
-border-radius:20px;
+transform:scale(1.04);
 }
 
-.titulo{
-font-family:"Cormorant Garamond";
-font-size:30px;
-margin-bottom:20px;
-}
+/* CONTENEDOR */
 
-audio{
-margin-top:20px;
-}
-
-#contador{
-font-size:26px;
-font-family:"Cormorant Garamond";
-}
-
-  .galeria{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-padding:20px;
-object-fit:cover;
-}
-
-.galeria img{
-width:100%;
-border-radius:15px;
-}
-
-  .foto-romantica{
-width:100%;
-height:500px;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-margin:40px 0;
-border-radius:20px;
-}
-
-  .contenedor{
+.contenedor{
 max-width:900px;
 margin:auto;
 background:rgba(184,169,156,0.25);
@@ -113,18 +75,106 @@ padding:40px 20px;
 border-radius:25px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 backdrop-filter:blur(6px);
--webkit-backdrop-filter:blur(6px);
 position:relative;
-z-index:1;
+z-index:2;
 }
 
-  section{
+/* SECCIONES */
+
+section{
 padding:80px 20px;
 position:relative;
 z-index:2;
 }
 
-  .animar{
+/* TITULOS */
+
+.titulo{
+font-family:'Halimum', cursive;
+font-size:32px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+/* SUBTITULOS PADRES */
+
+.subtitulo{
+font-weight:bold;
+font-size:16px;
+letter-spacing:1px;
+margin-top:20px;
+}
+
+/* TARJETAS */
+
+.tarjeta{
+background:#B8A99C;
+color:white;
+padding:50px 25px;
+margin:40px 10px;
+border-radius:20px;
+}
+
+/* ICONOS */
+
+.icono{
+font-size:28px;
+margin-bottom:10px;
+display:block;
+}
+
+/* FONDO FIJO */
+
+.fondo-parallax{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("fondo-boda.jpg") center/cover no-repeat;
+opacity:0.15;
+z-index:0;
+}
+
+/* GALERIA CARRUSEL */
+
+.galeria{
+display:flex;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+gap:15px;
+padding:20px;
+}
+
+.galeria img{
+width:80%;
+max-width:400px;
+border-radius:18px;
+scroll-snap-align:center;
+flex-shrink:0;
+}
+
+/* FOTO ROMANTICA */
+
+.foto-romantica{
+width:100%;
+height:450px;
+background-size:cover;
+background-position:center;
+border-radius:20px;
+margin:40px 0;
+}
+
+/* CONTADOR */
+
+#contador{
+font-size:24px;
+margin-top:10px;
+}
+
+/* ANIMACIONES */
+
+.animar{
 opacity:0;
 transform:translateY(40px);
 transition:all 1s ease;
@@ -135,56 +185,41 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* MOVIL */
 
-  .aparecer{
-opacity:0;
-transform:translateY(30px);
-animation:aparecerAnim 2s ease forwards;
-}
-
-@keyframes aparecerAnim{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-  @media (max-width:600px){
+@media(max-width:600px){
 
 .nombres{
-font-size:48px;
+font-size:46px;
 }
 
-.foto-romantica{
-height:350px;
-}
-
-section{
-padding:60px 20px;
-}
-
-.tarjeta{
-padding:40px 20px;
-}
 .titulo{
 font-size:26px;
 }
-.galeria{
-grid-template-columns:1fr;
+
+.foto-romantica{
+height:300px;
+}
+
+.galeria img{
+width:85%;
 }
 
 }
+
 </style>
 
 </head>
 
 <body>
 
+<div class="fondo-parallax"></div>
+
 <!-- PORTADA -->
 
 <section class="portada">
 
-<div class="nombres aparecer">Vale & Alan</div>
+<div class="nombres">Vale & Alan</div>
 
 <div class="fecha">
 17 Octubre 2026
@@ -196,15 +231,13 @@ Ver invitación
 
 </section>
 
-  <div class="contenedor">
+<div class="contenedor">
 
 <!-- MUSICA -->
 
-<section id="musica">
+<section id="musica" class="animar">
 
-<div class="titulo">
-Nuestra Canción
-</div>
+<div class="titulo">Nuestra Canción</div>
 
 <button onclick="document.getElementById('musicaBoda').play()" class="boton">
 Tocar nuestra canción
@@ -218,12 +251,9 @@ Tocar nuestra canción
 
 <!-- INVITACION -->
 
-
 <section class="animar">
 
-<div class="titulo">
-Dos caminos, una historia
-</div>
+<div class="titulo">Dos caminos, una historia</div>
 
 <p>
 Nuestros caminos se cruzaron y desde entonces caminamos juntos.
@@ -233,92 +263,68 @@ Nuestros caminos se cruzaron y desde entonces caminamos juntos.
 Hoy nuestros corazones celebran el amor que nos une y queremos compartir esta felicidad con ustedes.
 </p>
 
-<br>
-
 <p><strong>Con la bendición de Dios y de nuestros padres</strong></p>
 
-<br>
-
-<p style="font-size:14px;">Padres de la novia</p>
+<p class="subtitulo">Padres de la novia</p>
 
 <p>
 María de Jesús Moreno González<br>
 Florentino López Leós
 </p>
 
-<br>
-
-<p style="font-size:14px;">Padres del novio</p>
+<p class="subtitulo">Padres del novio</p>
 
 <p>
 Blanca Rita Gutiérrez Sánchez<br>
 Jaime Martín Pérez Rodríguez
 </p>
 
-<br><br>
-
-<p><strong>Padrinos</strong></p>
+<p class="subtitulo">Padrinos</p>
 
 <p>
 Irma Leticia Moreno González<br>
 Eduardo Zenteno Sánchez
 </p>
 
-<br>
-
 <p>
 Stephane Leilany Marroquín Sánchez<br>
 Angel Omar Carrillo Leija
 </p>
+
 </section>
+
+<!-- GALERIA -->
 
 <section class="animar">
-<div class="titulo">
-Nuestra Historia en Fotos
-</div>
 
-<p style="font-style:italic;">
-Cada momento juntos nos ha llevado hasta este día.
-</p>
+<div class="titulo">Nuestra Historia en Fotos</div>
 
 <div class="galeria">
-  
-<img src="foto1.jpg" alt="Foto de Vale y Alan" loading="lazy">
-<img src="foto2.jpg" alt="Foto de Vale y Alan" loading="lazy">
-<img src="foto3.jpg" alt="Foto de Vale y Alan" loading="lazy">
-<img src="foto4.jpg" alt="Foto de Vale y Alan" loading="lazy">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
 
 </div>
 
 </section>
 
-  <div class="foto-romantica" style="background-image:url('foto-romantica.jpg');"></div>
-
-  
-  
-
+<div class="foto-romantica" style="background-image:url('foto-romantica.jpg');"></div>
 
 <!-- CEREMONIA -->
 
-
 <section class="animar">
+
 <div class="tarjeta">
 
-<div class="titulo">
-Ceremonia Religiosa
-</div>
+<span class="icono">⛪</span>
 
+<div class="titulo">Ceremonia Religiosa</div>
 
 <p>
-Con la bendición de Dios y rodeados del amor de nuestras familias,
-queremos compartir con ustedes el momento en que uniremos nuestras vidas
-para siempre.
-</p>
-  
-<p>
-La ceremonia se llevará a cabo
-el 17 de Octubre a las 5:00 pm
-en la Iglesia San Nicolas de Bari.
+La ceremonia se llevará a cabo el 17 de Octubre a las 5:00 pm
+en la Iglesia San Nicolás de Bari.
 </p>
 
 <a class="boton" href="https://maps.app.goo.gl/cvPDZbtJzwzNC5he9" target="_blank">
@@ -331,21 +337,17 @@ Ubicación
 
 <!-- RECEPCION -->
 
-
 <section class="animar">
+
 <div class="tarjeta">
 
-<div class="titulo">
-Recepción
-</div>
+<span class="icono">🍸</span>
+
+<div class="titulo">Recepción</div>
 
 <p>
-
-Después de la ceremonia, a las 8:00 PM en el salón Emperador Eventos, los esperamos para celebrar juntos,
-compartir alegría, risas y comenzar esta nueva etapa rodeados
-de las personas que más queremos.
+Después de la ceremonia, a las 8:00 pm en el salón Emperador Eventos.
 </p>
-  
 
 <a class="boton" href="https://maps.app.goo.gl/4tMxNZ8hAWe6BYLW7" target="_blank">
 Ubicación
@@ -358,9 +360,8 @@ Ubicación
 <!-- CONTADOR -->
 
 <section class="animar">
-<div class="titulo">
-Cada momento nos acerca al día en que diremos “sí, para siempre”, faltan:
-</div>
+
+<div class="titulo">Faltan</div>
 
 <div id="contador"></div>
 
@@ -368,97 +369,79 @@ Cada momento nos acerca al día en que diremos “sí, para siempre”, faltan:
 
 <!-- VESTIMENTA -->
 
-
 <section class="animar">
 
 <div class="tarjeta">
 
-<div class="titulo">
-Código de Vestimenta
-</div>
+<span class="icono">👗 🤠</span>
+
+<div class="titulo">Código de Vestimenta</div>
 
 <p>
 Formal
 </p>
 
-<p style="font-size:14px;">
-Les pedimos amablemente vestir de manera formal para acompañarnos, queremos que se sientan cómodos y disfruten con nosotros esta noche tan especial.
+<p>
+Les pedimos vestir de manera elegante para acompañarnos en esta noche especial.
 </p>
 
 </div>
-
-
 
 </section>
 
 <!-- REGALOS -->
 
 <section class="animar">
+
 <div class="tarjeta">
-<div class="titulo">
-Sugerencia de Regalo
-</div>
+
+<span class="icono">🎁</span>
+
+<div class="titulo">Sugerencia de Regalo</div>
 
 <p>
 Tu presencia es nuestro mejor regalo,
-pero si deseas tener un detalle hemos elegido la lluvia de sobres, lo recibiremos con mucho cariño.
+pero si deseas tener un detalle hemos elegido la lluvia de sobres.
 </p>
 
 </div>
+
 </section>
+
+<!-- MENSAJE -->
 
 <section class="animar">
-  
+
 <div class="tarjeta">
 
-<div class="titulo">
-Nuestro Amor
+<div class="titulo">Nuestro Amor</div>
+
+<p>
+Creemos que los caminos de la vida no se cruzan por casualidad.
+</p>
+
+<p>
+Dios permitió que nuestras almas se reencontraran para caminar juntas.
+</p>
+
+<p>
+Nuestro amor es testimonio de la voluntad perfecta de Dios.
+</p>
+
 </div>
 
-<p>
-Creemos firmemente que los caminos de la vida no se cruzan por casualidad.
-</p>
-
-<p>
-Dios, en su perfecta voluntad, permitió que nuestras almas se reencontraran
-para caminar juntas, aprender juntas y amarse cada día más.
-</p>
-
-<p>
-Hoy damos gracias por habernos encontrado y por cada paso que nos ha traído
-hasta este momento.
-</p>
-
-<p>
-Con alegría y fe en nuestros corazones, comenzamos una nueva etapa,
-unidos en amor y bendecidos por Dios.
-</p>
-
-<p style="margin-top:30px; font-style:italic;">
-"Nuestro amor es testimonio de la voluntad perfecta de Dios."
-</p>
-
-
-</div>
 </section>
-
-
-
-
-  
-
 
 <!-- CONFIRMACION -->
 
 <section class="animar">
+
 <div class="tarjeta">
 
-<div class="titulo">
-Confirma tu asistencia
-</div>
+<div class="titulo">Confirma tu asistencia</div>
 
 <p>
-Tu presencia sería un regalo muy especial para nosotros...
+Tu presencia sería un regalo muy especial para nosotros.
 </p>
 
 <a class="boton"
@@ -466,25 +449,35 @@ href="https://wa.me/5218129100720?text=Confirmo%20mi%20asistencia%20a%20su%20bod
 Confirmar
 </a>
 
-<p style="margin-top:40px; font-style:italic;">
-Gracias por ser parte de nuestra historia
-y acompañarnos en el comienzo de esta nueva vida juntos.
-</p>
-
-<p style="margin-top:40px; font-style:italic;">
-Con amor, Vale y Alan.
-</p>
-
 </div>
+
 </section>
 
+<section>
 
+<p style="font-size:18px;margin-top:60px;">
+Gracias por acompañarnos en este momento tan especial.
+</p>
+
+<p style="font-family:'Halimum';font-size:40px;">
+Con amor
+</p>
+
+<p style="font-family:'Halimum';font-size:50px;">
+Vale & Alan
+</p>
+
+</section>
+
+</div>
 
 <script>
 
+/* CONTADOR */
+
 const fechaBoda = new Date("Oct 17, 2026 17:00:00").getTime();
 
-const contador = setInterval(function(){
+setInterval(function(){
 
 const ahora = new Date().getTime();
 const distancia = fechaBoda - ahora;
@@ -495,52 +488,36 @@ const minutos = Math.floor((distancia%(1000*60*60))/(1000*60));
 const segundos = Math.floor((distancia%(1000*60))/1000);
 
 document.getElementById("contador").innerHTML =
-dias + " días " + horas + " horas " + minutos + " min " + segundos + " seg";
+dias+" días "+horas+" horas "+minutos+" min "+segundos+" seg";
 
 },1000);
 
-</script>
-<section>
 
-<p style="margin-top:60px; font-style:italic; font-size:18px;">
-Gracias por acompañarnos en este momento tan especial de nuestras vidas.
-</p>
-
-<p style="font-family:'Great Vibes'; font-size:40px; margin-top:20px;">
-Con amor,
-</p>
-
-<p style="font-family:'Great Vibes'; font-size:50px;">
-Vale & Alan
-  ♡ 17 Octubre 2026 ♡
-</p>
-
-</section>
-  </div>
-  <script>
+/* ANIMACION SCROLL */
 
 const elementos = document.querySelectorAll('.animar');
 
-function mostrarElementos(){
+function mostrar(){
 
-const alturaPantalla = window.innerHeight;
+const altura = window.innerHeight;
 
-elementos.forEach(el => {
+elementos.forEach(el=>{
 
 const distancia = el.getBoundingClientRect().top;
 
-if(distancia < alturaPantalla - 100){
-el.classList.add('visible');
+if(distancia < altura-100){
+el.classList.add("visible");
 }
 
 });
 
 }
 
-window.addEventListener('scroll', mostrarElementos);
+window.addEventListener("scroll",mostrar);
 
-mostrarElementos();
+mostrar();
 
 </script>
+
 </body>
 </html>
