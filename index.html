@@ -7,18 +7,22 @@
 
 <title>Boda Vale & Alan</title>
 
-<!-- TIPOGRAFIAS -->
-
-<link href="https://fonts.cdnfonts.com/css/halimum" rel="stylesheet">
+<!-- TIPOGRAFIA TITULOS -->
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-background:#F3EEE9;
 font-family:'DejaVu Serif', serif;
 color:#5C5148;
 text-align:center;
+
+background-image:url("fondo.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
 }
 
 /* PORTADA */
@@ -35,9 +39,9 @@ padding:20px;
 }
 
 .nombres{
-font-family:'Halimum', cursive;
-font-size:64px;
-font-weight:bold;
+font-family:'Parisienne', cursive;
+font-size:72px;
+letter-spacing:2px;
 }
 
 .fecha{
@@ -45,7 +49,7 @@ font-size:20px;
 margin-top:10px;
 }
 
-/* BOTONES */
+/* BOTON */
 
 .boton{
 display:inline-block;
@@ -57,12 +61,12 @@ text-decoration:none;
 border-radius:25px;
 font-size:14px;
 cursor:pointer;
-transition:all .3s;
+transition:.3s;
 }
 
 .boton:hover{
 background:#3a3a3a;
-transform:scale(1.04);
+transform:scale(1.05);
 }
 
 /* CONTENEDOR */
@@ -70,37 +74,30 @@ transform:scale(1.04);
 .contenedor{
 max-width:900px;
 margin:auto;
-background:rgba(184,169,156,0.25);
+background:rgba(184,169,156,0.22);
 padding:40px 20px;
 border-radius:25px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
-backdrop-filter:blur(6px);
-position:relative;
-z-index:2;
 }
 
 /* SECCIONES */
 
 section{
 padding:80px 20px;
-position:relative;
-z-index:2;
 }
 
 /* TITULOS */
 
 .titulo{
-font-family:'Halimum', cursive;
-font-size:32px;
-font-weight:bold;
+font-family:'Parisienne', cursive;
+font-size:36px;
 margin-bottom:20px;
 }
 
-/* SUBTITULOS PADRES */
+/* SUBTITULOS */
 
 .subtitulo{
 font-weight:bold;
-font-size:16px;
 letter-spacing:1px;
 margin-top:20px;
 }
@@ -115,28 +112,7 @@ margin:40px 10px;
 border-radius:20px;
 }
 
-/* ICONOS */
-
-.icono{
-font-size:28px;
-margin-bottom:10px;
-display:block;
-}
-
-/* FONDO FIJO */
-
-.fondo-parallax{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:url("fondo-boda.jpg") center/cover no-repeat;
-opacity:0.15;
-z-index:0;
-}
-
-/* GALERIA CARRUSEL */
+/* GALERIA */
 
 .galeria{
 display:flex;
@@ -177,7 +153,7 @@ margin-top:10px;
 .animar{
 opacity:0;
 transform:translateY(40px);
-transition:all 1s ease;
+transition:1s;
 }
 
 .animar.visible{
@@ -190,11 +166,11 @@ transform:translateY(0);
 @media(max-width:600px){
 
 .nombres{
-font-size:46px;
+font-size:48px;
 }
 
 .titulo{
-font-size:26px;
+font-size:28px;
 }
 
 .foto-romantica{
@@ -212,8 +188,6 @@ width:85%;
 </head>
 
 <body>
-
-<div class="fondo-parallax"></div>
 
 <!-- PORTADA -->
 
@@ -318,8 +292,6 @@ Angel Omar Carrillo Leija
 
 <div class="tarjeta">
 
-<span class="icono">⛪</span>
-
 <div class="titulo">Ceremonia Religiosa</div>
 
 <p>
@@ -328,7 +300,7 @@ en la Iglesia San Nicolás de Bari.
 </p>
 
 <a class="boton" href="https://maps.app.goo.gl/cvPDZbtJzwzNC5he9" target="_blank">
-Ubicación
+Ver ubicación
 </a>
 
 </div>
@@ -341,16 +313,15 @@ Ubicación
 
 <div class="tarjeta">
 
-<span class="icono">🍸</span>
-
 <div class="titulo">Recepción</div>
 
 <p>
-Después de la ceremonia, a las 8:00 pm en el salón Emperador Eventos.
+Después de la ceremonia celebraremos juntos
+a las 8:00 pm en el salón Emperador Eventos.
 </p>
 
 <a class="boton" href="https://maps.app.goo.gl/4tMxNZ8hAWe6BYLW7" target="_blank">
-Ubicación
+Ver ubicación
 </a>
 
 </div>
@@ -373,8 +344,6 @@ Ubicación
 
 <div class="tarjeta">
 
-<span class="icono">👗 🤠</span>
-
 <div class="titulo">Código de Vestimenta</div>
 
 <p>
@@ -382,7 +351,8 @@ Formal
 </p>
 
 <p>
-Les pedimos vestir de manera elegante para acompañarnos en esta noche especial.
+Les pedimos vestir de manera elegante
+para acompañarnos en esta noche especial.
 </p>
 
 </div>
@@ -395,13 +365,12 @@ Les pedimos vestir de manera elegante para acompañarnos en esta noche especial.
 
 <div class="tarjeta">
 
-<span class="icono">🎁</span>
-
 <div class="titulo">Sugerencia de Regalo</div>
 
 <p>
 Tu presencia es nuestro mejor regalo,
-pero si deseas tener un detalle hemos elegido la lluvia de sobres.
+pero si deseas tener un detalle
+hemos elegido la lluvia de sobres.
 </p>
 
 </div>
@@ -417,15 +386,18 @@ pero si deseas tener un detalle hemos elegido la lluvia de sobres.
 <div class="titulo">Nuestro Amor</div>
 
 <p>
-Creemos que los caminos de la vida no se cruzan por casualidad.
+Creemos que los caminos de la vida
+no se cruzan por casualidad.
 </p>
 
 <p>
-Dios permitió que nuestras almas se reencontraran para caminar juntas.
+Dios permitió que nuestras almas
+se reencontraran para caminar juntas.
 </p>
 
 <p>
-Nuestro amor es testimonio de la voluntad perfecta de Dios.
+Nuestro amor es testimonio
+de su voluntad perfecta.
 </p>
 
 </div>
@@ -446,7 +418,7 @@ Tu presencia sería un regalo muy especial para nosotros.
 
 <a class="boton"
 href="https://wa.me/5218129100720?text=Confirmo%20mi%20asistencia%20a%20su%20boda">
-Confirmar
+Confirmar asistencia
 </a>
 
 </div>
@@ -459,11 +431,11 @@ Confirmar
 Gracias por acompañarnos en este momento tan especial.
 </p>
 
-<p style="font-family:'Halimum';font-size:40px;">
+<p style="font-family:'Parisienne';font-size:42px;">
 Con amor
 </p>
 
-<p style="font-family:'Halimum';font-size:50px;">
+<p style="font-family:'Parisienne';font-size:52px;">
 Vale & Alan
 </p>
 
@@ -492,8 +464,7 @@ dias+" días "+horas+" horas "+minutos+" min "+segundos+" seg";
 
 },1000);
 
-
-/* ANIMACION SCROLL */
+/* ANIMACION */
 
 const elementos = document.querySelectorAll('.animar');
 
@@ -514,7 +485,6 @@ el.classList.add("visible");
 }
 
 window.addEventListener("scroll",mostrar);
-
 mostrar();
 
 </script>
