@@ -82,15 +82,13 @@ font-size:38px;
 margin-bottom:20px;
 }
 
-/* TARJETAS CON TEXTURA */
+/* TARJETAS */
 
 .tarjeta{
 max-width:900px;
 margin:auto;
 padding:45px 30px;
 border-radius:22px;
-
-/* textura suave */
 
 background:
 linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
@@ -104,8 +102,6 @@ transparent 6px
 
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
-
-/* SUBTITULOS */
 
 .subtitulo{
 font-weight:bold;
@@ -194,284 +190,119 @@ padding:35px 22px;
 
 <body>
 
-<!-- PORTADA -->
-
 <section class="portada">
-
 <div class="nombres">Vale & Alan</div>
-
-<div class="fecha">
-17 Octubre 2026
-</div>
-
-<a class="boton" href="#musica">
-Ver invitación
-</a>
-
+<div class="fecha">17 Octubre 2026</div>
+<a class="boton" href="#musica">Ver invitación</a>
 </section>
 
-<!-- MUSICA -->
-
 <section id="musica" class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Nuestra Canción</div>
-
 <button onclick="document.getElementById('musicaBoda').play()" class="boton">
 Tocar nuestra canción
 </button>
-
 <audio id="musicaBoda" loop>
 <source src="cancion2.mp3" type="audio/mpeg">
 </audio>
-
 </div>
-
 </section>
 
-<!-- INVITACION -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Dos caminos, una historia</div>
-
-<p>
-Nuestros caminos se cruzaron y desde entonces caminamos juntos.
-</p>
-
-<p>
-Hoy nuestros corazones celebran el amor que nos une y queremos compartir esta felicidad con ustedes.
-</p>
+<p>Nuestros caminos se cruzaron y desde entonces caminamos juntos.</p>
+<p>Hoy nuestros corazones celebran el amor que nos une y queremos compartir esta felicidad con ustedes.</p>
 
 <p><strong>Con la bendición de Dios y de nuestros padres</strong></p>
 
 <p class="subtitulo">Padres de la novia</p>
-
-<p>
-María de Jesús Moreno González<br>
-Florentino López Leós
-</p>
+<p>María de Jesús Moreno González<br>Florentino López Leós</p>
 
 <p class="subtitulo">Padres del novio</p>
-
-<p>
-Blanca Rita Gutiérrez Sánchez<br>
-Jaime Martín Pérez Rodríguez
-</p>
+<p>Blanca Rita Gutiérrez Sánchez<br>Jaime Martín Pérez Rodríguez</p>
 
 <p class="subtitulo">Padrinos</p>
-
-<p>
-Irma Leticia Moreno González<br>
-Eduardo Zenteno Sánchez
-</p>
-
-<p>
-Stephane Leilany Marroquín Sánchez<br>
-Angel Omar Carrillo Leija
-</p>
-
+<p>Irma Leticia Moreno González<br>Eduardo Zenteno Sánchez</p>
+<p>Stephane Leilany Marroquín Sánchez<br>Angel Omar Carrillo Leija</p>
 </div>
-
 </section>
 
-<!-- GALERIA -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Nuestra Historia en Fotos</div>
-
 <div class="galeria">
-
 <img src="foto1.jpg">
 <img src="foto2.jpg">
 <img src="foto3.jpg">
 <img src="foto4.jpg">
-
 </div>
-
 </div>
-
 </section>
 
 <div class="foto-romantica" style="background-image:url('foto-romantica.jpg');"></div>
 
-<!-- CEREMONIA -->
-
 <section class="animar">
-
 <div class="tarjeta">
 <div class="titulo">Ceremonia Religiosa</div>
-
-<p>
-Ante Dios prometemos caminar juntos, amarnos en cada etapa de la vida y cuidar el regalo de habernos encontrado.
-</p>
-
-<p>
-La ceremonia se llevará a cabo el 17 de Octubre a las 5:00 pm
-en la Iglesia San Nicolás de Bari.
-</p>
-  
-
-<a class="boton" href="https://maps.app.goo.gl/cvPDZbtJzwzNC5he9" target="_blank">
-Ver ubicación
-</a>
-
+<p>Ante Dios prometemos caminar juntos, amarnos en cada etapa de la vida y cuidar el regalo de habernos encontrado.</p>
+<p>17 de Octubre, 5:00 pm<br>Iglesia San Nicolás de Bari</p>
+<a class="boton" href="https://maps.app.goo.gl/cvPDZbtJzwzNC5he9" target="_blank">Ver ubicación</a>
 </div>
-
 </section>
 
-<!-- RECEPCION -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Recepción</div>
-
-<p>
-Después de la ceremonia celebraremos juntos
-a las 8:00 pm en el salón Emperador Eventos.
-</p>
-
-<a class="boton" href="https://maps.app.goo.gl/4tMxNZ8hAWe6BYLW7" target="_blank">
-Ver ubicación
-</a>
-
+<p>8:00 pm en salón Emperador Eventos.</p>
+<a class="boton" href="https://maps.app.goo.gl/4tMxNZ8hAWe6BYLW7" target="_blank">Ver ubicación</a>
 </div>
-
 </section>
 
-<!-- CONTADOR -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Faltan</div>
-
 <div id="contador"></div>
-
 </div>
-
 </section>
 
-<!-- VESTIMENTA -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Código de Vestimenta</div>
-
-<p>
-Formal
-</p>
-
-<p>
-Queremos verlos elegantes, pero sobre todo listos para disfrutar y bailar toda la noche.
-Si el estilo vaquero es parte de ti, siéntete libre de acompañar tu atuendo con sombrero o botas.
-</p>
-
+<p>Formal</p>
+<p>Queremos verlos elegantes, pero sobre todo listos para disfrutar y bailar toda la noche. Si te gusta el estilo vaquero, siéntete libre de usar sombrero o botas.</p>
 </div>
-
 </section>
 
-<!-- REGALOS -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
 <div class="titulo">Sugerencia de Regalo</div>
-
-<p>
-Tu presencia es nuestro mejor regalo,
-pero si deseas tener un detalle hemos elegido la lluvia de sobres.
-</p>
-
+<p>Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle hemos elegido la lluvia de sobres.</p>
 </div>
-
 </section>
 
-<!-- MENSAJE -->
-
 <section class="animar">
-
 <div class="tarjeta">
-
-<div class="titulo">Nuestro Amor</div>
-
-<p>
-Creemos que los caminos de la vida no se cruzan por casualidad.
-</p>
-
-<p>
-Dios permitió que nuestras almas se reencontraran para caminar juntas.
-</p>
-
-<p>
-Nuestro amor es testimonio de su voluntad perfecta.
-</p>
-
-</div>
-
-</section>
-
-<!-- CONFIRMACION -->
-
-<section class="animar">
-
-<div class="tarjeta">
-
 <div class="titulo">Confirma tu asistencia</div>
 
-<p>Para nosotros sería una alegría muy grande contar con tu presencia en este día tan especial.
-Te agradecemos confirmar tu asistencia para poder preparar cada detalle con mucho cariño.
-</p>
+<p>Para nosotros sería una alegría muy grande contar con tu presencia. Te agradecemos confirmar.</p>
 
-<a class="boton"
-href="https://wa.me/5218129100720?text=Confirmo%20mi%20asistencia%20a%20su%20boda">
-Confirmar asistencia
-</a>
+<div style="margin-top:20px;">
+<p class="subtitulo">Confirmar con Vale</p>
+<a class="boton" href="https://wa.me/5218129100720?text=Confirmo%20mi%20asistencia%20a%20su%20boda">WhatsApp Vale</a>
 
+<p class="subtitulo">Confirmar con Alan</p>
+<a class="boton" href="https://wa.me/5218126311065?text=Confirmo%20mi%20asistencia%20a%20su%20boda">WhatsApp Alan</a>
 </div>
 
-</section>
-
-<section>
-
-<div class="tarjeta">
-
-<p style="font-size:18px;">
-Gracias por acompañarnos en este momento tan especial.
-</p>
-
-<p style="font-family:'Parisienne';font-size:42px;">
-Con amor
-</p>
-
-<p style="font-family:'Parisienne';font-size:52px;">
-Vale & Alan
-</p>
-
 </div>
-
 </section>
 
 <script>
 
-/* CONTADOR */
-
 const fechaBoda = new Date(2026, 9, 17, 17, 0, 0).getTime();
 
 const contador = setInterval(function(){
-
 const ahora = new Date().getTime();
 const distancia = fechaBoda - ahora;
 
@@ -491,24 +322,16 @@ dias+" días "+horas+" horas "+minutos+" min "+segundos+" seg";
 
 },1000);
 
-/* ANIMACION */
-
 const elementos = document.querySelectorAll('.animar');
 
 function mostrar(){
-
 const altura = window.innerHeight;
-
 elementos.forEach(el=>{
-
 const distancia = el.getBoundingClientRect().top;
-
 if(distancia < altura-100){
 el.classList.add("visible");
 }
-
 });
-
 }
 
 window.addEventListener("scroll",mostrar);
