@@ -147,14 +147,25 @@ transform:translateY(0);
 .foto-romantica{height:300px;}
 .galeria img{width:85%;}
 .tarjeta{padding:35px 22px;}
-   .carrusel-track{
-width:280px;
-height:500px;
+
+.carrusel{
+gap:5px;
+}
+
+.carrusel-track{
+width:220px;
+height:390px;
 }
 
 .carrusel-track img{
-width:280px;
-height:500px;
+width:220px;
+height:390px;
+object-fit:contain;
+}
+
+.flecha{
+padding:8px 10px;
+font-size:18px;
 }
 
 }
@@ -356,8 +367,6 @@ Ver ideas de vestimenta
 </div>
 
 </div>
-</div>
-</section>
 
 
 
@@ -477,7 +486,9 @@ if(e.target===modal) modal.style.display="none";
 
 
 
- let i=0;
+let i=0;
+
+let i=0;
 
 function moverCarrusel(dir){
 
@@ -489,7 +500,9 @@ i+=dir;
 if(i<0)i=total-1;
 if(i>=total)i=0;
 
-track.style.transform=`translateX(-${i*450}px)`;
+const ancho = track.children[0].offsetWidth;
+
+track.style.transform=`translateX(-${i*ancho}px)`;
 }
 </script>
 
