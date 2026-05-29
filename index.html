@@ -158,8 +158,10 @@ height:390px;
 }
 
 .carrusel-track img{
-width:220px;
-height:390px;
+max-width:100%;
+max-height:70vh;
+width:auto;
+height:auto;
 object-fit:contain;
 }
 
@@ -353,10 +355,13 @@ Ver ideas de vestimenta
 
 <button class="flecha" onclick="moverCarrusel(-1)">&#10094;</button>
 
-<div class="carrusel-track" id="trackVestimenta">
 
-<img src="vestido1.jpg" alt="Vestimenta 1">
-<img src="vestido2.jpg" alt="Vestimenta 2">
+
+<div class="carrusel-track">
+
+<img id="imagenVestimenta"
+src="vestido1.jpg"
+alt="Vestimenta">
 
 </div>
 
@@ -485,21 +490,27 @@ if(e.target===modal) modal.style.display="none";
 });
 
 
-let i=0;
+let i = 0;
+
+const imagenes = [
+"vestido1.jpg",
+"vestido2.jpg"
+];
 
 function moverCarrusel(dir){
 
-const track=document.getElementById("trackVestimenta");
-const total=track.children.length;
+i += dir;
 
-i+=dir;
+if(i < 0){
+i = imagenes.length - 1;
+}
 
-if(i<0)i=total-1;
-if(i>=total)i=0;
+if(i >= imagenes.length){
+i = 0;
+}
 
-const ancho = track.children[0].offsetWidth;
+document.getElementById("imagenVestimenta").src = imagenes[i];
 
-track.style.transform=`translateX(-${i*ancho}px)`;
 }
 </script>
 
