@@ -180,6 +180,8 @@ width:92%;
 text-align:center;
 position:relative;
 box-shadow:0 30px 80px rgba(0,0,0,0.35);
+   max-height:95vh;
+overflow-y:auto;
 }
 
 .cerrar{
@@ -201,22 +203,23 @@ margin-top:20px;
 
 .carrusel-track{
 display:flex;
-width:400px;
-height:710px;
+width:450px;
+height:800px;
 overflow:hidden;
 border-radius:20px;
 transition:transform .5s ease;
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
 margin:auto;
 }
 
 .carrusel-track img{
-width:400px;
-height:710px;
+width:450px;
+height:800px;
 object-fit:contain;
 flex-shrink:0;
-background:white;
 }
+
+
+   
 
 .flecha{
 background:rgba(0,0,0,0.55);
@@ -323,32 +326,35 @@ Ver ideas de vestimenta
 </button>
 </div>
 </section>
-  <!-- MODAL VESTIMENTA -->
+
+
+   <!-- MODAL VESTIMENTA -->
 <div id="modalVestimenta" class="modal">
-  <div class="modal-contenido">
 
-    <span class="cerrar" onclick="cerrarVestimenta()">&times;</span>
+<div class="modal-contenido">
 
-    <h2>Código de Vestimenta</h2>
-    <p>Inspiración para tu outfit</p>
+<span class="cerrar" onclick="cerrarVestimenta()">&times;</span>
 
-    <div class="carrusel">
+<h2>Código de Vestimenta</h2>
+<p>Inspiración para tu outfit</p>
 
-      <button class="flecha" onclick="moverCarrusel(-1)">&#10094;</button>
+<div class="carrusel">
 
-      <div class="carrusel-track" id="trackVestimenta">
+<button class="flecha" onclick="moverCarrusel(-1)">&#10094;</button>
 
-        <img src="vestido1.jpg">
-        <img src="vestido2.jpg">
-        
+<div class="carrusel-track" id="trackVestimenta">
 
-      </div>
+<img src="vestido1.jpg" alt="Vestimenta 1">
+<img src="vestido2.jpg" alt="Vestimenta 2">
 
-      <button class="flecha" onclick="moverCarrusel(1)">&#10095;</button>
+</div>
 
-    </div>
+<button class="flecha" onclick="moverCarrusel(1)">&#10095;</button>
 
-  </div>
+</div>
+
+</div>
+
 </div>
 </div>
 </section>
@@ -471,7 +477,7 @@ if(e.target===modal) modal.style.display="none";
 
 
 
-   let i=0;
+ let i=0;
 
 function moverCarrusel(dir){
 
@@ -483,9 +489,7 @@ i+=dir;
 if(i<0)i=total-1;
 if(i>=total)i=0;
 
-const ancho = track.clientWidth;
-
-track.style.transform=`translateX(-${i*ancho}px)`;
+track.style.transform=`translateX(-${i*450}px)`;
 }
 </script>
 
