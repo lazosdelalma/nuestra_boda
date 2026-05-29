@@ -147,6 +147,15 @@ transform:translateY(0);
 .foto-romantica{height:300px;}
 .galeria img{width:85%;}
 .tarjeta{padding:35px 22px;}
+   .carrusel-track{
+width:280px;
+height:500px;
+}
+
+.carrusel-track img{
+width:280px;
+height:500px;
+}
 
 }
    /* ===== MODAL VESTIMENTA ===== */
@@ -192,19 +201,21 @@ margin-top:20px;
 
 .carrusel-track{
 display:flex;
-width:440px;
+width:400px;
+height:710px;
 overflow:hidden;
 border-radius:20px;
 transition:transform .5s ease;
 box-shadow:0 15px 35px rgba(0,0,0,0.15);
+margin:auto;
 }
 
 .carrusel-track img{
-width:440px;
-height:300px;
-object-fit:cover;
+width:400px;
+height:710px;
+object-fit:contain;
 flex-shrink:0;
-border-radius:20px;
+background:white;
 }
 
 .flecha{
@@ -458,9 +469,12 @@ const modal=document.getElementById("modalVestimenta");
 if(e.target===modal) modal.style.display="none";
 });
 
-let i=0;
+
+
+   let i=0;
 
 function moverCarrusel(dir){
+
 const track=document.getElementById("trackVestimenta");
 const total=track.children.length;
 
@@ -469,7 +483,9 @@ i+=dir;
 if(i<0)i=total-1;
 if(i>=total)i=0;
 
-track.style.transform=`translateX(-${i*440}px)`;
+const ancho = track.clientWidth;
+
+track.style.transform=`translateX(-${i*ancho}px)`;
 }
 </script>
 
